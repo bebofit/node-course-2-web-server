@@ -38,6 +38,12 @@ app.get('/about',(req,res)=>{
         currentYear : new Date().getFullYear()
     });
 })
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        pageTitle : 'Projects',
+        currentYear : new Date().getFullYear()
+    })
+})
 app.listen(port, ()=>{
     console.log(`Server is up on Port ${port}`);
 }); 
